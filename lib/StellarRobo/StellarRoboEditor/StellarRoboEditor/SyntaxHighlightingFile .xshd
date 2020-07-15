@@ -1,0 +1,144 @@
+<SyntaxDefinition name="SRD" extensions=".srd" xmlns="http://icsharpcode.net/sharpdevelop/syntaxdefinition/2008">
+  <Color name="Digits" foreground="#FF000000" exampleText="3.1415f" />
+  <Color name="Comment" foreground="#FF008000" exampleText="string text = &quot;Hello, World!&quot;" />
+  <Color name="Punctuation" foreground="#FF000000" exampleText="string text = &quot;Hello, World!&quot;" />
+  <Color name="String" foreground="#FFa31515" exampleText="string text = &quot;Hello, World!&quot;" />
+  <Color name="Keyword" foreground="#FF2b98ff" fontWeight="normal" exampleText="SELECT" />
+  <Color name="MethodCall" foreground="#FF000000" fontWeight="normal" />
+  <Color name="ObjectReference" foreground="#FF000000" exampleText="Customer.Name" />
+  <Color name="CommentMarkerSetTodo" foreground="#FF000000" fontWeight="normal" />
+  <Color name="CommentMarkerSetHackUndone" foreground="#FF000000" fontWeight="normal" />
+  <RuleSet name="CommentMarkerSet">
+    <Keywords color="CommentMarkerSetTodo">
+      <Word>TODO</Word>
+      <Word>FIXME</Word>
+    </Keywords>
+    <Keywords color="CommentMarkerSetHackUndone">
+      <Word>HACK</Word>
+      <Word>UNDONE</Word>
+    </Keywords>
+  </RuleSet>
+  <RuleSet ignoreCase="true">
+    <Span color="String" multiline="false">
+      <Begin>"</Begin>
+      <End>"</End>
+    </Span>
+    <Span color="Comment" begin="//" end="\n" ruleSet="CommentMarkerSet" />
+    <Span color="Comment" ruleSet="CommentMarkerSet" multiline="true">
+      <Begin>/\*</Begin>
+      <End>\*/</End>
+    </Span>
+    <Span color="Comment" ruleSet="CommentMarkerSet" multiline="true">
+      <Begin>\#{</Begin>
+      <End>\#}</End>
+    </Span>
+    <Keywords color="Keyword">
+      <Word>app_active</Word>
+      <Word>app_close</Word>
+      <Word>app_open</Word>
+      <Word>app_set_pos</Word>
+      <Word>app_wait</Word>
+      <Word>app_window_enable</Word>
+      <Word>browser_click</Word>
+      <Word>browser_close</Word>
+      <Word>browser_get_coordinate</Word>
+      <Word>browser_input</Word>
+      <Word>browser_open_url</Word>
+      <Word>browser_output</Word>
+      <Word>browser_navigate</Word>
+      <Word>browser_wait</Word>
+      <Word>browser_check_id</Word>
+      <Word>browser_quit</Word>
+      <Word>browser_select_box</Word>
+      <Word>browser_list</Word>
+      <Word>browser_change</Word>
+      <Word>browser_owner</Word>
+      <Word>capture</Word>
+      <Word>check_data</Word>
+      <Word>check_date</Word>
+      <Word>combine_path</Word>
+      <Word>directory_exists</Word>
+      <Word>date_add</Word>
+      <Word>excel_open</Word>
+      <Word>excel_close</Word>
+      <Word>excel_get_cell</Word>
+      <Word>excel_set_cell</Word>
+      <Word>excel_search</Word>
+      <Word>excel_get_search_result</Word>
+      <Word>excel_get_search_count</Word>
+      <Word>excel_add_sheet</Word>
+      <Word>excel_remove_sheet</Word>
+      <Word>file_copy</Word>
+      <Word>file_delete</Word>
+      <Word>file_exists</Word>
+      <Word>file_rename</Word>
+      <Word>file_move</Word>
+      <Word>search_file</Word>
+      <Word>get_file_name</Word>
+      <Word>get_acc_is_checked</Word>
+      <Word>get_acc_name</Word>
+      <Word>get_acc_role</Word>
+      <Word>get_acc_value</Word>
+      <Word>get_browser_magnification</Word>
+      <Word>set_browser_magnification</Word>
+      <Word>get_download_path</Word>
+      <Word>get_error_code</Word>
+      <Word>get_error_message</Word>
+      <Word>get_ime_status</Word>
+      <Word>get_parent_title</Word>
+      <Word>get_reg_ex_count</Word>
+      <Word>get_window_handle</Word>
+      <Word>get_window_handle_parent</Word>
+      <Word>get_window_handle_point</Word>
+      <Word>get_window_text</Word>
+      <Word>get_windows_version</Word>
+      <Word>global_variable</Word>
+      <Word>image_match</Word>
+      <Word>init_file</Word>
+      <Word>input_box</Word>
+      <Word>input_keys</Word>
+      <Word>input_text_box</Word>
+      <Word>left_click</Word>
+      <Word>left_double_click</Word>
+      <Word>left_down</Word>
+      <Word>left_up</Word>
+      <Word>logger</Word>
+      <Word>message_box</Word>
+      <Word>middle_click</Word>
+      <Word>middle_double_click</Word>
+      <Word>middle_down</Word>
+      <Word>middle_up</Word>
+      <Word>move</Word>
+      <Word>now</Word>
+      <Word>output_text_box</Word>
+      <Word>read_file</Word>
+      <Word>read_xml</Word>
+      <Word>right_click</Word>
+      <Word>right_double_click</Word>
+      <Word>right_down</Word>
+      <Word>right_up</Word>
+      <Word>send_keys</Word>
+      <Word>set_ime_status</Word>
+      <Word>set_window_pos_z</Word>
+      <Word>to_int</Word>
+      <Word>to_str</Word>
+      <Word>wait</Word>
+      <Word>write_file</Word>
+      <Word>folder_open</Word>
+      <Word>get_current_path</Word>
+      <Word>set_current_path</Word>
+    </Keywords>
+    <Rule color="Punctuation">
+      [?,.;()\[\]{}+\-/%*&lt;&gt;^+~!|&amp;]+
+    </Rule>
+    <Rule color="MethodCall">[\d\w_]+(?=(\s*\())</Rule>
+    <Rule color="Digits">
+      \b0[xX][0-9a-fA-F]+  # hex number
+      |
+      (    \b\d+(\.[0-9]+)?   #number with optional floating point
+      |    \.[0-9]+           #or just starting with floating point
+      )
+      ([eE][+-]?[0-9]+)? # optional exponent
+    </Rule>
+  </RuleSet>
+</SyntaxDefinition>

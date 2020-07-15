@@ -1,0 +1,20 @@
+check_data関数
+指定された文字列より、正規表現で検索を行いヒットした文字列を取得する
+
+構文
+string check_data(string TextData, string Pattern)
+
+パラメタ
+TextData
+タイプ：string
+検索を行いたい文字列
+
+Pattern
+タイプ：string
+検索を行う正規表現
+
+戻り値
+タイプ：string
+関数が成功した場合、戻り値はヒットした文字列になります。エラーの場合には空文字になります。
+
+

@@ -1,0 +1,21 @@
+browser_wait関数
+Browserが使用可能な状態になるまで待つ
+
+構文
+int browser_wait(string BrowserKeyName, int TimeOut)
+
+パラメタ
+BrowserKeyName
+タイプ：string
+browser_navigate関数で取得した戻り値
+
+TimeOut
+タイプ：int
+最大待ち時間
+
+戻り値
+タイプ：int
+関数が成功した場合、戻り値は0になります。エラーの場合には0以外になります。
+ただし、TimeOut時間を設定し設定時間をオーバーした場合にのみ-1が戻ります。
+
+

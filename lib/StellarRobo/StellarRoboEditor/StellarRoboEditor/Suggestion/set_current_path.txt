@@ -1,0 +1,16 @@
+set_current_path関数
+カレントパスを変更します。
+
+構文
+bool set_current_path(string currentPath)
+
+パラメタ
+currentPath
+タイプ：string
+カレントパスを指定します。
+
+戻り値
+タイプ：bool
+関数が成功した場合、戻り値はTrueになります。エラーの場合にはFalseになります。
+
+

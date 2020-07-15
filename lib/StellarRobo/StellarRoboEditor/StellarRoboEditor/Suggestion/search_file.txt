@@ -1,0 +1,20 @@
+search_file関数
+指定Pathより、指定Fileを検索し発見したFile名を返します。
+
+構文
+string[] search_file(string PathName, string FileName)
+
+パラメタ
+PathName
+タイプ：string
+書き込みを行うファイルパスを指定します。
+
+FileName
+タイプ：string
+書き込みを行うテキスト指定します。
+
+戻り値
+タイプ：string
+関数が成功した場合、戻り値は発見したFile名(配列)になります。エラーの場合にはnillになります。
+
+

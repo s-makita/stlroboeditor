@@ -1,0 +1,25 @@
+write_file関数
+指定ファイルにテキストを書き込みます。
+
+構文
+int write_file(string FileName, string TextData,string Encoding)
+
+パラメタ
+FileName
+タイプ：string
+書き込みを行うファイルパスを指定します。
+
+TextData
+タイプ：string
+書き込みを行うテキスト指定します。
+
+Encoding
+タイプ：string
+書き込みを行う文字コードをしています。
+指定出来る文字コードは、UniCode、UTF-16、UTF-8、Shift_Jis、euc-jp、iso-2022-jpです。
+
+戻り値
+タイプ：int
+関数が成功した場合、戻り値は0になります。エラーの場合には0以外になります。
+
+

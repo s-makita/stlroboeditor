@@ -1,0 +1,24 @@
+output_text_box関数
+項目名を指定し出力を行う
+
+構文
+bool output_text_box(string Handle, string SearchWord, string Message, int SearchType)
+
+パラメタ
+Handle
+タイプ：string
+出力を行いたいWindowのHandle
+
+SearchWord
+タイプ：string
+出力を行いたい項目名
+
+SearchType
+タイプ：int
+項目検索タイプ
+
+戻り値
+タイプ：bool
+関数が成功した場合、戻り値はマッチした項目の内容になります。エラーの場合には空白になります。
+
+

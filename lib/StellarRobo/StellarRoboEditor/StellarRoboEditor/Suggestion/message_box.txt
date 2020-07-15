@@ -1,0 +1,24 @@
+message_box関数
+メッセージボックスを表示する
+
+構文
+int message_box(string Message, int ButtonType, int IconType)
+
+パラメタ
+Message
+タイプ：string
+メッセージボックスに表示させたい文言を指定します。
+
+ButtonType
+タイプ：int
+メッセージボックスに表示させたいボタンタイプを指定します。
+
+IconType
+タイプ：int
+メッセージボックスに表示させたいアイコンタイプを指定します。
+
+戻り値
+タイプ：int
+関数が成功した場合、戻り値は押下されたボタンの数値になります。エラーの場合にはマイナスの値になります。
+
+

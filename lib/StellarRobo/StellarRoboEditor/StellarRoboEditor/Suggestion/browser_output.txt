@@ -1,0 +1,24 @@
+browser_output関数
+Browserの指定項目より取得を行う
+
+構文
+string browser_output(string BrowserKeyName, string Element, int SearchType)
+
+パラメタ
+BrowserKeyName
+タイプ：string
+browser_navigate関数で取得した戻り値
+
+Element
+タイプ：string
+出力を行いたい項目名
+
+SearchType
+タイプ：string
+項目検索タイプ
+
+戻り値
+タイプ：string
+関数が成功した場合、戻り値は出力した値になります。エラーの場合には空白になります。
+
+

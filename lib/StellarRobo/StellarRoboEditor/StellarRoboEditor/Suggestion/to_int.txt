@@ -1,0 +1,16 @@
+to_int関数
+数字を数値へ変換する
+
+構文
+int to_int(string StringValue)
+
+パラメタ
+StringValue
+タイプ：string
+変換を行いたい数字
+
+戻り値
+タイプ：int
+関数が成功した場合、戻り値は変換後の数値になります。エラーの場合には0になります。
+
+

@@ -1,0 +1,20 @@
+file_copy関数
+ファイルのコピーを行います。
+
+構文
+int file_copy(string sourceFileName, string destFileName)
+
+パラメタ
+sourceFileName
+タイプ：string
+コピー元ファイルパスを指定します。
+
+destFileName
+タイプ：string
+コピー先ファイルパスを指定します。
+
+戻り値
+タイプ：int
+関数が成功した場合、戻り値は0になります。エラーの場合には0以外になります。
+
+

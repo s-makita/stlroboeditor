@@ -1,0 +1,16 @@
+check_date関数
+入力された日付文字列が正しいかをチェックする
+
+構文
+bool check_date(string DateData)
+
+パラメタ
+DateData
+タイプ：string
+確認を行いたい日付文字列
+
+戻り値
+タイプ：bool
+日付文字列が正しい場合、戻り値はtrueになります。正しくない場合にはfalseになります。
+
+

@@ -1,0 +1,20 @@
+set_window_pos_z関数
+指定アプリのZ-Orderの変更を行う
+
+構文
+int set_window_pos_z(long WindowHandle, int Z-Order)
+
+パラメタ
+WindowHandle
+タイプ：long
+Z-Orderを変更したいアプリのハンドル
+
+Z-Order
+タイプ：int
+指定したいZ-Order
+
+戻り値
+タイプ：int
+関数が成功した場合、戻り値は0になります。エラーの場合には0以外になります。
+
+

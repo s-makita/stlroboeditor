@@ -1,0 +1,20 @@
+get_acc_is_checked関数
+MicroSoft Accessibilityを使用し、指定座標下のPotionButton及び、CheckBoxの状態を取得する
+
+構文
+int get_acc_is_checked(int x, int y)
+
+パラメタ
+x
+タイプ：int
+マウスカーソルのX座標を指定します。
+
+y
+タイプ：int
+マウスカーソルのY座標を指定します。
+
+戻り値
+タイプ：int
+関数が成功しチェックされていた場合1を返しそれ以外は0を返す。エラーの場合には0以下になります。
+
+

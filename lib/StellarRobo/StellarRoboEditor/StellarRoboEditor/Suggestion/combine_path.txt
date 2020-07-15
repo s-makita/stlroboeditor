@@ -1,0 +1,20 @@
+combine_path関数
+Path、FileNameを結合し絶対パスを作成する
+
+構文
+string combine_path(string Path, string FileName)
+
+パラメタ
+Path
+タイプ：string
+結合を行うPath
+
+FileName
+タイプ：string
+結合を行うFileName
+
+戻り値
+タイプ：string
+関数が成功した場合、戻り値は結合した文字列になります。エラーの場合には空文字になります。
+
+

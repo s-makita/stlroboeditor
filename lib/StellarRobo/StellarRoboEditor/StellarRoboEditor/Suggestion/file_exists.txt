@@ -1,0 +1,16 @@
+file_exists関数
+ファイルの存在確認を行います。
+
+構文
+int file_exists(string fileName)
+
+パラメタ
+fileName
+タイプ：string
+存在確認ファイルパスを指定します。
+
+戻り値
+タイプ：int
+ファイルが存在した場合、戻り値はtrueになります。ファイルが存在しない場合、エラーの場合にはfalseになります。
+
+

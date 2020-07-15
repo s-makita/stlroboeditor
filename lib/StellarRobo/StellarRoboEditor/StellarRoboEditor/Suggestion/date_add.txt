@@ -1,0 +1,24 @@
+date_add関数
+日付に対して加減算を行う
+
+構文
+string date_add(int Interval, int TimeInterval, string date)
+
+パラメタ
+Interval
+タイプ：int
+時間間隔
+
+TimeInterval
+タイプ：int
+加算時間間隔
+
+date
+タイプ：string
+加減算を行う日付
+
+戻り値
+タイプ：string
+関数が成功した場合、戻り値は加減算を行った日付になります。エラーの場合には空文字になります。
+
+

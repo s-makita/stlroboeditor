@@ -1,0 +1,16 @@
+browser_close関数
+指定されたBrowserを閉じる
+
+構文
+int browser_close(string BrowserKeyName)
+
+パラメタ
+BrowserKeyName
+タイプ：string
+browser_navigate関数で取得した戻り値
+
+戻り値
+タイプ：int
+関数が成功した場合、戻り値は0になります。エラーの場合には0以外になります。
+
+

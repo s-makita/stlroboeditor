@@ -1,0 +1,16 @@
+browser_list関数
+Browserから開いた子Browserの一覧を取得する
+
+構文
+string[] browser_list(string BrowserKeyName)
+
+パラメタ
+BrowserKeyName
+タイプ：string
+browser_navigate関数で取得した戻り値
+
+戻り値
+タイプ：string
+関数が成功した場合、戻り値は子Browser(配列)。エラーの場合にはNullになります。
+
+

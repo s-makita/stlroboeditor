@@ -1,0 +1,20 @@
+capture関数
+指定された画像フォーマットで画面をキャプチャする
+
+構文
+bool capture(string FileName, string ImageFormat)
+
+パラメタ
+FileName
+タイプ：string
+キャプチャ画面を保存したいファイル名
+
+ImageFormat
+タイプ：string
+キャプチャ画面を保存する画像フォーマット
+
+戻り値
+タイプ：bool
+関数が成功した場合、戻り値はtrueになります。エラーの場合にはfalseになります。
+
+

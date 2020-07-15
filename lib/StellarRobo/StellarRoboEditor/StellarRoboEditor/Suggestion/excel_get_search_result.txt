@@ -1,0 +1,20 @@
+excel_get_search_result関数
+excel_search関数でマッチした情報を返す
+
+構文
+string[] excel_get_search_result(string ExcelKeyName, int Index)
+
+パラメタ
+ExcelKeyName
+タイプ：string
+ecxel_open関数で取得した戻り値
+
+Index
+タイプ：int
+取得Index
+
+戻り値
+タイプ：string
+関数が成功した場合、戻り値は[シート名,行,列]になります。エラーの場合には空になります。
+
+

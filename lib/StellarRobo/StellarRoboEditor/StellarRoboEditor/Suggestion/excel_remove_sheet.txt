@@ -1,0 +1,20 @@
+excel_remove_sheet関数
+Excelから指定のシートを削除する
+
+構文
+bool excel_remove_sheet(string ExcelKeyName, string SheetName)
+
+パラメタ
+ExcelKeyName
+タイプ：string
+ecxel_open関数で取得した戻り値
+
+SheetName
+タイプ：string
+シート名
+
+戻り値
+タイプ：int
+関数が成功した場合、戻り値はtrueになります。エラーの場合にはfalseになります。
+
+

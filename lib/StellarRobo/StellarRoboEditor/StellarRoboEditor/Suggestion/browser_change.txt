@@ -1,0 +1,20 @@
+browser_change関数
+Browserの操作対象を変更する
+
+構文
+bool browser_change(string BrowserKeyName, string ChangeOwnerHandle)
+
+パラメタ
+BrowserKeyName
+タイプ：string
+browser_navigate関数で取得した戻り値
+
+ChangeOwnerHandle
+タイプ：string
+操作したいBrowser
+
+戻り値
+タイプ：bool
+項目が存在した場合、戻り値はTrueになります。それ以外の場合にはFalseになります。
+
+

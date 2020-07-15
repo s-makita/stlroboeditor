@@ -1,0 +1,24 @@
+app_wait関数
+指定アプリが起動/終了まで待つ
+
+構文
+int app_wait(string WindowTitle, int State, int TimeOut)
+
+パラメタ
+WindowTitle
+タイプ：string
+起動/終了を待ちたいアプリのWindowタイトルを指定
+
+State
+タイプ：int
+待つ状態
+
+TimeOut
+タイプ：int
+最大待ち時間
+
+戻り値
+タイプ：int
+関数が成功した場合、戻り値は0になります。エラーの場合には0以外になります。
+
+

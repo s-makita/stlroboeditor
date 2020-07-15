@@ -1,0 +1,26 @@
+logger関数
+ログメッセージ出力（ファイル、メール、SNMP）
+
+構文
+int logger(int OutputType, string Message, string AttachedFile)
+
+パラメタ
+Message
+タイプ：string
+出力するメッセージ
+
+OutputType
+タイプ：int
+出力先の指定（下記参照）省略可
+
+
+AttachedFile
+タイプ：string
+添付ファイル（下記参照）省略可
+
+戻り値
+タイプ：int
+関数が成功した場合、戻り値は0になります。エラーの場合には0以外になります。
+
+
+

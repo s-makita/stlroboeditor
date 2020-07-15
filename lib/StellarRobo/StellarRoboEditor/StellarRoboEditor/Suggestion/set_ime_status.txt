@@ -1,0 +1,14 @@
+set_ime_status関数
+Imeを指定されたモードに設定する
+
+構文
+void set_time_status(int ImeMode)
+
+パラメタ
+ImeMode
+タイプ：int
+設定したいImeモードを指定する
+
+戻り値
+
+

@@ -1,0 +1,16 @@
+get_file_name関数
+File名を含んだPathより、File名を抽出する
+
+構文
+string get_file_name(stirng FileName)
+
+パラメタ
+FileName
+タイプ：string
+File名を含んだPath
+
+戻り値
+タイプ：string
+関数が成功した場合、戻り値は取得したFile名になります。エラーの場合には空文字になります。
+
+

@@ -1,0 +1,20 @@
+file_move関数
+ファイルを移動します。
+
+構文
+bool file_move(string sourceFileName, string destFileName)
+
+パラメタ
+sourceFileName
+タイプ：string
+リネーム元ファイルパスを指定します。
+
+destFileName
+タイプ：string
+リネーム先ファイルパスを指定します。
+
+戻り値
+タイプ：bool
+関数が成功した場合、戻り値はTrueになります。それ以外の場合にはFalseになります。
+
+

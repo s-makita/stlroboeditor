@@ -1,0 +1,20 @@
+read_xml関数
+外部からxmlファイルを介しデータ引き渡しを行う
+
+構文
+string read_xml(string XmlName, string ElementName)
+
+パラメタ
+XmlName
+タイプ：string
+データを取り込みたいXmlファイル名
+
+ElementName
+タイプ：string
+データを保管してる要素名
+
+戻り値
+関数が成功した場合、設定されている値を取得。
+関数が失敗した場合、空文字が返される
+
+

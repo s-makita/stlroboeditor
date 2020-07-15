@@ -1,0 +1,13 @@
+get_windows_version関数
+現在実行中のWindowsのバージョンを取得する
+
+構文
+string get_windows_version()
+
+パラメタ
+
+戻り値
+関数が成功した場合、現在実行中のWindowsのバージョンを取得する。
+関数が失敗した場合、空文字が返される
+
+

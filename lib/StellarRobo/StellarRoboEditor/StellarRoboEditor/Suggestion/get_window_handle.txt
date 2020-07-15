@@ -1,0 +1,20 @@
+get_window_handle関数
+Class名、Windowタイトルがマッチしたアプリのハンドルを取得する
+
+構文
+long get_window_handle(string ClassName, string WindowTitle)
+
+パラメタ
+ClassName
+タイプ：string
+表示位置を指定したいアプリのClass名を指定
+
+WindowTitle
+タイプ：string
+表示位置を指定したいアプリのWindowタイトルを指定
+
+戻り値
+タイプ：Long
+関数が成功した場合、戻り値は取得出来たWindowハンドルになります。エラーの場合には0以下になります。
+
+

@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<StellarRoboSetting xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Logfile></Logfile>
+  <RotateType></RotateType>
+  <RotateCount></RotateCount>
+  <HistoryCount></HistoryCount>
+  <dump>0</dump>
+  <Mailer_Host></Mailer_Host>
+  <Mailer_Port></Mailer_Port>
+  <Mailer_User></Mailer_User>
+  <Mailer_Password></Mailer_Password>
+  <Snmp_Host></Snmp_Host>
+  <Snmp_Port></Snmp_Port>
+  <MailAddressFrom></MailAddressFrom>
+  <MailAddressTo></MailAddressTo>
+  <MailDisplayNameFrom></MailDisplayNameFrom>
+  <MailDisplayNameTo></MailDisplayNameTo>
+  <MailSubject></MailSubject>
+  <EngineID></EngineID>
+  <EnableSsl></EnableSsl>
+</StellarRoboSetting>

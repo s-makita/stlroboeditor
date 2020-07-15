@@ -1,0 +1,13 @@
+get_window_handle_point関数
+現在のマウス座標下のWindowハンドルを取得する
+
+構文
+long get_window_handle_point()
+
+パラメタ
+
+戻り値
+タイプ：long
+関数が成功した場合、戻り値は取得出来たWindowハンドルになります。エラーの場合には0になります。
+
+

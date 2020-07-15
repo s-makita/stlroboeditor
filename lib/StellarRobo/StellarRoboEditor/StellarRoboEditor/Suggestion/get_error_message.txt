@@ -1,0 +1,13 @@
+get_error_message関数
+直前の実行結果メッセージを返す
+
+構文
+string get_error_message()
+
+パラメタ
+
+戻り値
+タイプ：string
+戻り値は直前に実行された結果メッセージになります。
+
+

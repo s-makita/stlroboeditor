@@ -1,0 +1,20 @@
+get_acc_value関数
+MicroSoft Accessibilityを使用し、指定座標下のValueプロパティの値を取得する
+
+構文
+string get_acc_value(int x, int y)
+
+パラメタ
+x
+タイプ：int
+マウスカーソルのX座標を指定します。
+
+y
+タイプ：int
+マウスカーソルのY座標を指定します。
+
+戻り値
+タイプ：string
+関数が成功した場合、戻り値は取得出来た値になります。エラーの場合には空になります。
+
+

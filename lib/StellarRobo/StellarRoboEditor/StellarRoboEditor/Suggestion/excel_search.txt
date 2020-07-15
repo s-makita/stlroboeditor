@@ -1,0 +1,24 @@
+excel_search関数
+シートから指定文字列を検索する
+
+構文
+int excel_search(string ExcelKeyName, string SearchWord, string SheetName)
+
+パラメタ
+ExcelKeyName
+タイプ：int
+ecxel_open関数で取得した戻り値
+
+SearchWord
+タイプ：int
+検索を行う値
+
+SheetName
+タイプ：int
+シート名 省略時には開いたExcelファイルの全シートが検索対象となります。
+
+戻り値
+タイプ：int
+関数が成功した場合、戻り値はマッチした件数になります。エラーの場合には0になります。
+
+

@@ -1,0 +1,24 @@
+browser_get_coordinate関数
+Browserの指定項目の座標(top、left、width、height)を取得する
+
+構文
+int[] browser_get_coordinate(string BrowserKeyName, string Element, int SearchType)
+
+パラメタ
+BrowserKeyName
+タイプ：string
+browser_navigate関数で取得した戻り値
+
+Element
+タイプ：string
+座標を取得したい項目名
+
+SearchType
+タイプ：string
+項目検索タイプ
+
+戻り値
+タイプ：int
+関数が成功した場合、戻り値は取得出来た座標になります。エラーの場合には座標0,0を返します
+
+

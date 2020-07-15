@@ -1,0 +1,20 @@
+excel_open関数
+指定されたExcelファイルを開く
+
+構文
+string excel_open(string fileName, bool createNew)
+
+パラメタ
+fileName
+タイプ：string
+Excelファイル
+
+createNew
+タイプ：bool
+新規作成フラグ 省略時にはfalse
+
+戻り値
+タイプ：string
+関数が成功した場合、戻り値は他のExcel関数で使用するキーになります。エラーの場合には空になります。
+
+

@@ -1,0 +1,13 @@
+Include関数
+外部からのデータ引き渡しを行う
+
+構文
+include "FileName"
+
+パラメタ
+FileName
+タイプ：string
+
+戻り値
+
+

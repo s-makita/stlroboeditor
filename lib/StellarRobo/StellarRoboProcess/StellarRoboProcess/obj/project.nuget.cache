@@ -1,0 +1,19 @@
+{
+  "version": 2,
+  "dgSpecHash": "yZHA2k9o+9r+NCJvddY06dPLWdw87b/zLyzwtGFvU337RaHytf6JUkAJXShjWeCJftgq1Wxw2IYs19yLOhym2A==",
+  "success": true,
+  "projectFilePath": "Z:\\Documents\\BitBucket\\streditor\\StellarRobo\\StellarRoboProcess\\StellarRoboProcess\\StellarRoboProcess.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\tanak\\.nuget\\packages\\anglesharp\\0.12.1\\anglesharp.0.12.1.nupkg.sha512",
+    "C:\\Users\\tanak\\.nuget\\packages\\npoi\\2.4.1\\npoi.2.4.1.nupkg.sha512",
+    "C:\\Users\\tanak\\.nuget\\packages\\opencvsharp3-anycpu\\4.0.0.20181129\\opencvsharp3-anycpu.4.0.0.20181129.nupkg.sha512",
+    "C:\\Users\\tanak\\.nuget\\packages\\selenium.support\\3.141.0\\selenium.support.3.141.0.nupkg.sha512",
+    "C:\\Users\\tanak\\.nuget\\packages\\selenium.webdriver\\3.141.0\\selenium.webdriver.3.141.0.nupkg.sha512",
+    "C:\\Users\\tanak\\.nuget\\packages\\sharpziplib\\1.0.0\\sharpziplib.1.0.0.nupkg.sha512",
+    "C:\\Users\\tanak\\.nuget\\packages\\snmpsharpnet\\0.9.5\\snmpsharpnet.0.9.5.nupkg.sha512",
+    "C:\\Users\\tanak\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.5.0\\system.runtime.compilerservices.unsafe.4.5.0.nupkg.sha512",
+    "C:\\Users\\tanak\\.nuget\\packages\\system.text.encoding.codepages\\4.5.0\\system.text.encoding.codepages.4.5.0.nupkg.sha512",
+    "C:\\Users\\tanak\\.nuget\\packages\\webdrivermanager\\2.5.1\\webdrivermanager.2.5.1.nupkg.sha512"
+  ],
+  "logs": []
+}

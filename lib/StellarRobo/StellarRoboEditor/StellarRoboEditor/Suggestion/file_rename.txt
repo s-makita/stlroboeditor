@@ -1,0 +1,20 @@
+file_rename関数
+ファイルの名称を変更します。
+
+構文
+int file_rename(string sourceFileName, string destFileName)
+
+パラメタ
+sourceFileName
+タイプ：string
+リネーム元ファイルパスを指定します。
+
+destFileName
+タイプ：string
+リネーム先ファイルパスを指定します。
+
+戻り値
+タイプ：int
+関数が成功した場合、戻り値は0になります。エラーの場合には0以外になります。
+
+

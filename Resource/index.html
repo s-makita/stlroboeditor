@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Blockly Demo: Resizable Blockly (Part 2)</title>
+    <script type="text/javascript" src="../node_modules/admin-lte/plugins/jquery/jquery.min.js"></script>
+    <script src="../node_modules/blockly/blockly.js"></script>
+    <script src="../node_modules/blockly/blocks.js"></script>
+    <script src="../node_modules/blockly/msg/en.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="../node_modules/admin-lte/plugins/fontawesome-free/css/all.min.css" />
+    <!-- Tempusdominus Bbootstrap 4 -->
+    <link
+      rel="stylesheet"
+      href="../node_modules/admin-lte/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css"
+    />
+    <!-- iCheck -->
+    <link
+      rel="stylesheet"
+      href="../node_modules/admin-lte/plugins/icheck-bootstrap/icheck-bootstrap.min.css"
+    />
+    <!-- Theme style -->
+    <link rel="stylesheet" href="../node_modules/admin-lte/dist/css/adminlte.min.css" />
+    <!-- overlayScrollbars -->
+    <link
+      rel="stylesheet"
+      href="../node_modules/admin-lte/plugins/overlayScrollbars/css/OverlayScrollbars.min.css"
+    />
+    <!-- Daterange picker -->
+    <link rel="stylesheet" href="../node_modules/admin-lte/plugins/daterangepicker/daterangepicker.css" />
+    <!-- summernote -->
+    <link rel="stylesheet" href="../node_modules/admin-lte/plugins/summernote/summernote-bs4.css" />
+    <style>
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+      }
+      body {
+        background-color: #fff;
+        font-family: sans-serif;
+        overflow: hidden;
+      }
+      #blocklyArea {
+        height: 99%;
+      }
+    </style>
+  </head>
+  <body class="hold-transition sidebar-mini layout-fixed">
+    <div id="app" class="wrapper h-100">
+      <!-- Main Sidebar Container -->
+      <aside class="main-sidebar sidebar-dark-primary elevation-4">
+
+        <!-- Sidebar -->
+        <div id="explorer" class="sidebar">
+          <!-- Sidebar Menu -->
+          <nav class="mt-2">
+            <explorer path="./"></explorer>
+          </nav>
+          <!-- /.sidebar-menu -->
+        </div>
+        <!-- /.sidebar -->
+      </aside>
+
+      <!-- Content Wrapper. Contains page content -->
+      <div class="content-wrapper h-100">
+        <!-- Content Header (Page header) -->
+        <div class="content-header bg-white m-0 p-0">
+          <ul class="nav nav-pills" role="tablist">
+            <li class="nav-item p-2">
+              <a class="nav-link active" id="texteditor-tab" data-toggle="pill" href="#texteditor" role="pill" aria-controls="texteditor" aria-selected="true">テキスト</a>
+            </li>
+            <li class="nav-item mr-auto p-2">
+              <a class="nav-link" id="visualeditor-tab" data-toggle="pill" href="#visualeditor" role="pill" aria-controls="visualeditor" aria-selected="false">ビジュアル</a>
+            </li>
+            <li class="p-2 mb-2"><button type="button" v-on:click="onplay" class="btn btn-light"><i class="fas fa-play pr-2"></i>実行</button></li>
+            <li class="p-2 mb-2"><button type="button" v-on:click="onstop" class="btn btn-light disable"><i class="fas fa-stop pr-2"></i>停止</button></li>
+            <li class="p-2 mb-2"><button type="button" v-on:click="onrecording" class="btn btn-light"><i class="fas fa-video pr-2"></i>録画</button></li>
+          </ul>
+        </div>
+        <!-- /.content-header -->
+        <!-- Main content -->
+        <section class="content tab-content h-75">
+          <pre id="texteditor" class="h-100 m-3 border-left container-fluid tab-pane active" contenteditable="true" style="outline: none;">{{job}}</pre>
+          <div id="visualeditor" class="container-fluid tab-pane h-100" style="z-index: 50; position: absolute; top: 0; right: 0;">
+            <table style="height: 80%;width: 100%;">
+              <tr>
+                <td id="blocklyArea" style="position: absolute; top: 30px; left: 250px; width: 100%;"></td>
+              </tr>
+            </table>
+
+            <!-- <div id="blocklyDiv" style="position: absolute"></div> -->
+            <div id="blocklyDiv" style="position: absolute; top: 30px; left: 250px; width: 100%;"></div>
+
+          </div>
+          <!-- /.container-fluid -->
+        </section>
+        <!-- /.content-wrapper -->
+        <footer class="footer h-auto bg-white">
+          <pre style="font-size: 10px; white-space: pre-wrap ;">
+            <code>
+tanakasatoshinoMacBook-Pro:streditor tanakasatoshi$ electron .
+(electron) The default value of app.allowRendererProcessReuse is deprecated, it is currently "false".  It will change to be "true" in Electron 9.  For more information please check https://github.com/electron/electron/issues/18397
+tanakasatoshinoMacBook-Pro:streditor tanakasatoshi$ electron .
+(electron) The default value of app.allowRendererProcessReuse is deprecated, it is currently "false".  It will change to be "true" in Electron 9.  For more information please check https://github.com/electron/electron/issues/18397
+tanakasatoshinoMacBook-Pro:streditor tanakasatoshi$ electron .
+(electron) The default value of app.allowRendererProcessReuse is deprecated, it is currently "false".  It will change to be "true" in Electron 9.  For more information please check https://github.com/electron/electron/issues/18397
+tanakasatoshinoMacBook-Pro:streditor tanakasatoshi$
+          </code> </pre>
+        </footer>
+        <!-- /.content -->
+      </div>
+
+    </div>
+    <!-- ./wrapper -->
+    <!-- StellarRobo -->
+    <script src="./index.js" type="module"></script>
+    <!-- jQuery UI 1.11.4 -->
+    <script src="../node_modules/admin-lte/plugins/jquery-ui/jquery-ui.min.js"></script>
+    <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+    <script>
+      $.widget.bridge("uibutton", $.ui.button);
+    </script>
+    <!-- Bootstrap 4 -->
+    <script src="../node_modules/admin-lte/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- daterangepicker -->
+    <script src="../node_modules/admin-lte/plugins/moment/moment.min.js"></script>
+    <script src="../node_modules/admin-lte/plugins/daterangepicker/daterangepicker.js"></script>
+    <!-- Tempusdominus Bootstrap 4 -->
+    <script src="../node_modules/admin-lte/plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
+    <!-- Summernote -->
+    <script src="../node_modules/admin-lte/plugins/summernote/summernote-bs4.min.js"></script>
+    <!-- overlayScrollbars -->
+    <script src="../node_modules/admin-lte/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+    <!-- AdminLTE App -->
+    <script src="../node_modules/admin-lte/dist/js/adminlte.js"></script>
+  </body>
+</html>

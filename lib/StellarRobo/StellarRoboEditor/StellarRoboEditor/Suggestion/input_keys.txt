@@ -1,0 +1,20 @@
+input_keys関数
+フォーカスを持っている入力コントロールに1文字づつ入力を行う
+
+構文
+int input_keys(string TextData, int waitTime)
+
+パラメタ
+TextData
+タイプ：string
+入力テキストデータを指定します。
+
+waitTime
+タイプ：int
+文字入力時間隔を指定します。
+
+戻り値
+タイプ：int
+関数が成功した場合、戻り値は0になります。エラーの場合には0以外になります。
+
+

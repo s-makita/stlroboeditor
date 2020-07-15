@@ -1,0 +1,16 @@
+get_window_text関数
+指定アプリのWindowタイトルを取得する
+
+構文
+string get_window_text(long WindowHandle)
+
+パラメタ
+WindowHandle
+タイプ：long
+Windowタイトルを取得したいアプリのハンドル
+
+戻り値
+タイプ：string
+関数が成功した場合、戻り値は取得出来たWindowタイトルになります。エラーの場合には空白になります。
+
+

@@ -1,0 +1,16 @@
+excel_get_search_count関数
+excel_search関数でマッチした件数を返す
+
+構文
+int excel_get_search_count(string ExcelKeyName)
+
+パラメタ
+ExcelKeyName
+タイプ：string
+ecxel_open関数で取得した戻り値
+
+戻り値
+タイプ：int
+関数が成功した場合、戻り値は検索でマッチした件数になります。エラーの場合には0になります。
+
+

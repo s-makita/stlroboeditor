@@ -1,0 +1,24 @@
+browser_check_id関数
+Browserの指定項目の存在確認を行う。
+
+構文
+bool browser_check_id(string BrowserKeyName, string Element, int SearchType)
+
+パラメタ
+BrowserKeyName
+タイプ：string
+browser_navigate関数で取得した戻り値
+
+Element
+タイプ：string
+確認したい項目名
+
+SearchType
+タイプ：string
+項目検索タイプ
+
+戻り値
+タイプ：bool
+項目が存在した場合、戻り値はTrueになります。それ以外の場合にはFalseになります。
+
+

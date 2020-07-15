@@ -1,0 +1,16 @@
+global_variable関数
+外部からのデータ引き渡しを行う
+
+構文
+string global_variable(string VariableName)
+
+パラメタ
+VariableName
+タイプ：string
+変数名
+
+戻り値
+関数が成功した場合、設定されている値を取得。
+関数が失敗した場合、空文字が返される
+
+

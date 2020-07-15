@@ -1,0 +1,20 @@
+excel_close関数
+Excelを閉じる
+
+構文
+bool excel_close(string ExcelKeyName, bool SaveFlg)
+
+パラメタ
+ExcelKeyName
+タイプ：string
+ecxel_open関数で取得した戻り値
+
+SaveFlg
+タイプ：bool
+終了時保存フラグ、省略時True
+
+戻り値
+タイプ：bool
+関数が成功した場合、戻り値はtrueになります。エラーの場合にはfalseになります。
+
+

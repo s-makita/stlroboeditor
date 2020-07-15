@@ -1,0 +1,16 @@
+direcotry_exists関数
+指定ディレクトリの存在を確認します。
+
+構文
+bool directory_exists(string DirectoryName)
+
+パラメタ
+DirectoryName
+タイプ：string
+存在を確認するDirectory名
+
+戻り値
+タイプ：bool
+指定したDirectoryが存在した場合、戻り値はTrueになります。それ以外の場合にはFalseになります。
+
+

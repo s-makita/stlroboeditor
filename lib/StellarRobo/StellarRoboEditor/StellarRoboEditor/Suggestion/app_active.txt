@@ -1,0 +1,20 @@
+app_active関数
+Class名、Windowタイトルがマッチしたアプリをアクティブにする
+
+構文
+int app_active(string ClassName, string WindowTitle)
+
+パラメタ
+ClassName
+タイプ：string
+アクティブにしたいアプリのClass名を指定
+
+WindowTitle
+タイプ：string
+アクティブにしたいアプリのWindowタイトルを指定
+
+戻り値
+タイプ：int
+関数が成功した場合、戻り値は0になります。エラーの場合には0以外になります。
+
+
