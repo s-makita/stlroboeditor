@@ -1,71 +1,24 @@
-// import { Stats } from "fs";
-window.vue.registcomponent('explorer');
-
-//設定ファイルにデータを保存する。（programsというキーでJSONデータを保存する）
-// window.config.set("programs", { index: 1, name: 'TEST', path: 'c/' });
-
-var App = new window.vue({
-  el: '#app',
-  props: {
-    _job: {
-      type: String,
-      default: "func main\r\n\tleft_down(27, 886)\r\n\twait(125)\r\n\tleft_up(26, 886)\r\n\twait(1140)\r\n\tleft_down(27, 884)\r\n\twait(125)\r\n\tleft_up(27, 884)\r\nendfunc"
-    },
-    _workspace: {
-      type: String,
-      default: ''
-    },
-    _current: {
-      type: String,
-      default: ''
-    },
-  },
-  methods: {
-    onplay(event){
-      Event.emit('App.onplay');
-    },
-    onstop(event){
-      Event.emit('App.onstop');
-    },
-    onrecording(event){
-      Event.emit('App.onrecording');
-    }
-  },
-  computed: {
-    job: {
-      get(){
-        return this._job;
-      },
-      set(value){
-        this._job = value;
-        // イベント発火：処理内容を変更
-        Event.emit('App.job.set');
-      }
-    },
-    workspace: {
-      get(){
-        return this._workspace;
-      },
-      set(value){
-        this._workspace = value;
-        // イベント発火：ワークスペースのパスを変更
-        Event.emit('App.workspace.set');
-      }
-    },
-    current: {
-      get(){
-        return this._current;
-      },
-      set(value){
-        this._current = value;
-        // イベント発火：現在のファイルのパスを変更
-        Event.emit('App.current.set');
-      }
-    }
+var explorer = {};
+var root = {};
+var header = new window.vue({
+  el: '#header',
+  components: {
+    toolbar: window.httpVueLoader('./Components/toolbar.vue')
   }
 });
-
-
+var main = new window.vue({
+  el: '#main',
+  components: {
+    texteditor: window.httpVueLoader('./Components/texteditor.vue'),
+    visualeditor: window.httpVueLoader('./Components/visualeditor.vue'),
+  }
+});
+var footer = new window.vue({
+  el: '#footer',
+  components: {
+    stacktrace: window.httpVueLoader('./Components/stacktrace.vue')
+  }
+});
 /**
  * イベント
  * 当アプリ全体のイベントに関する実装。イベント発火のみを実装範囲とする。
@@ -146,4 +99,27 @@ Event.on('App.current.set',function(){
 Event.on('Explorer.file.onselected',function(){
   // 現在のファイルのパスを、選択されたファイルのパスに変更する。
   // App.current = Explorer.selected;
+});
+
+window.request({
+  url: "http://localhost:3000/api/dir/scan",
+  method: "POST",
+  headers: {
+    'Content-Type':'application/json'
+  },
+  json: true,
+  form: {path: "/strage/"}
+}, function (error, response, body) {
+  root = body;
+  explorer = new window.vue({
+    el: '#explorer',
+    components: {
+      explorer: window.httpVueLoader('./Components/explorer.vue')
+    },
+    data: function () {
+      return {
+        item: root
+      }
+    },
+  });
 });

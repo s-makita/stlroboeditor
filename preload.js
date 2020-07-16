@@ -12,15 +12,18 @@ process.once('loaded', () => {
 
   global.fs = require('fs');
   global.vue = require('./node_modules/vue/dist/vue.js');
-  global.componentdirpath = './Resource/Components/';
-  global.vue.registcomponent = function(name,encode='utf8',dirpath = global.componentdirpath){
-    var component = require(`${dirpath}${name}/${name}.js`);
-    component.template = fs.readFileSync(`${dirpath}${name}/${name}.html`, encode);
-    global.vue.component(name, window.vue.extend( component ) );
-  }
+  global.httpVueLoader = require('./node_modules/http-vue-loader');
+  // global.componentdirpath = './Resource/Components/';
+  // global.vue.registcomponent = function(name,encode='utf8',dirpath = global.componentdirpath){
+  //   var component = require(`${dirpath}${name}/${name}.js`);
+  //   component.template = fs.readFileSync(`${dirpath}${name}/${name}.html`, encode);
+  //   global.vue.component(name, window.vue.extend( component ) );
+  // }
+  // global.explorer = global.vue.component("explorer" , require('./Components/explorer.vue'));
   global.scheduler = require("node-schedule");
   global.events = require('events');
   global.console = require('electron').remote.require('console');
+  global.request = require("request");
   // global.jobrunner = new JobRunner();
 
   global.nodeRequire = require;

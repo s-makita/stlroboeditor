@@ -1,4 +1,34 @@
-const { app, BrowserWindow, ipcMain } = require('electron');
+const express = require("express");
+const exapp = express();
+const fs = require("fs");
+const path = require('path');
+const walkdir = require('walkdir');
+const child_process = require('child_process');
+const log = require('electron-log');
+const ExplorerItem = require("./logic/ExplorerItem");
+
+exapp.use(express.static("./"));
+exapp.use(express.urlencoded({extended: true}));
+/**
+ * ツリー情報を取得する。
+ */
+exapp.post('/api/dir/scan',(req,res) => {
+    // ルートディレクトリのパスを作成。
+    var rootPath = "." + req.body.path;
+    // ファイル（またはフォルダ）の情報を取得
+    var stats = fs.statSync(rootPath);
+    // ファイルの場合処理を中断する。
+    if((stats.isFile())){
+        return;
+    }
+    // ルートディレクトリ配下のアイテムを取得
+    var subItems = scanDir(rootPath);
+    // フォルダなので拡張子は無い。
+    var ext = null;
+    var item = new ExplorerItem(rootPath,rootPath,null,null,stats.isFile(),ext,subItems);
+    res.json(item);
+});
+exapp.listen(3000, "127.0.0.1");
 
 /**
  * スケジューラー
@@ -34,11 +64,10 @@ const JobRunner = new class {
     };
 }
 
-const path = require('path');
-const child_process = require('child_process');
-const log = require('electron-log');
+
+const { app, BrowserWindow, ipcMain } = require('electron');
 var windows = [];
-function createWindow(html_path){
+function createWindow(url){
     let window = new BrowserWindow({
         width: 1440,
         height: 900,
@@ -52,13 +81,43 @@ function createWindow(html_path){
         window = null
     })
     window.openDevTools();
-    window.loadFile(html_path);
+    window.loadURL(url);
 //    run();
     return window;
 }
+
+function scanDir(targetPath){
+    var result = [];
+    // 指定フォルダ内のファイル、サブフォルダを取得
+    var subitems = fs.readdirSync(targetPath);
+    subitems.forEach(function(itemName){
+        // フルパスを取得
+        var fullPath = path.join(targetPath, itemName);
+        // ファイル（またはフォルダ）の情報を取得
+        var stats = fs.statSync(fullPath);
+        // フォルダの場合、サブアイテム情報を格納する入れ物
+        var items = null;
+        // フォルダの場合
+        if(stats.isDirectory()){
+            // 再帰呼び出し
+            items = scanDir(fullPath);
+        }
+        var ext = null;
+        // ファイルの場合
+        if(stats.isFile()){
+            ext = path.extname(fullPath);
+        }
+        // サブアイテムの情報
+        var item = new ExplorerItem(itemName,fullPath,null,null,stats.isFile(),ext,items);
+        // サブアイテムの情報を追加
+        result.push(item);
+    });
+    return result;
+}
+
 // アプリ起動時
 app.on('ready', function() {
-    windows.push(createWindow('Resource/index.html'));
+    windows.push(createWindow('http://localhost:3000/index.html'));
 });
 // アプリケーションがウィンドウをクローズし始める前
 app.on('before-quit', function() {

@@ -1,0 +1,9 @@
+func main
+    left_down(27, 886)
+    wait(125)
+    left_up(26, 886)
+    wait(1140)
+    left_down(27, 884)
+    wait(125)
+    left_up(27, 884)
+endfunc

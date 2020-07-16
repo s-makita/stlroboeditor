@@ -2,17 +2,23 @@
  * エクスプローラに表示するアイテム。階層構造で入れ子になる。
  */
 module.exports = class ExplorerItem {
-    constructor() {
+    constructor(name,path,stats,status,isFile,ext,items) {
         // 名前。コンストラクタで設定。
-        this.name;
+        this.name = name;
         // フルパス。コンストラクタで設定。
-        this.path;
+        this.path = path;
         // ファイルシステムから取得した情報。コンストラクタで設定。
-        this.stats;
+        this.stats = stats;
+        // ファイルか
+        this.isFile = isFile;
+        // 拡張子
+        this.ext = ext;
         // 状態
-        this.status;
+        this.status = status;
         // 子階層
-        this.items;
+        this.items = items;
+        // 開閉したか
+        this.isOpen = false;
     }
     /*
     * 名前を取得
@@ -34,13 +40,6 @@ module.exports = class ExplorerItem {
     getStats(){
         // ファイルシステムから取得した情報を取得後のイベント
         // Event.ExplorerItem.getStats
-    }
-    /**
-     * ファイルかどうかの判断結果を取得
-     */
-    isFile(){
-        // ファイルかどうかの判断結果を取得後のイベント
-        // Event.ExplorerItem.isFile
     }
     /**
      * 状態を取得する
